@@ -41,12 +41,26 @@ const maxNumber = (num1, num2) => {
 
 // average function
 const average = (num) => {
-  let sum = 0;
-  for (let i = 0; i < num.length; i++) {
-    sum += num[i];
-  }
+  if (num.some(isNaN)) {
+    return {
+      status: 400,
+      data: {
+        error: `invalid input enter numbers`,
+      },
+    };
+  } else {
+    let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+      sum += num[i];
+    }
 
-  return sum / num.length;
+    return {
+      status: 200,
+      data: {
+        average: sum / num.length,
+      },
+    };
+  }
 };
 
 // ascending function
@@ -56,7 +70,7 @@ const ascendingOrder = (num) => {
     return {
       status: 400,
       data: {
-        error: `Invalid input`,
+        error: `Invalid input enter numbers`,
       },
     };
   } else {
@@ -72,7 +86,12 @@ const ascendingOrder = (num) => {
       }
     }
 
-    return num;
+    return {
+      status: 200,
+      data: {
+        ascending: num,
+      },
+    };
   }
 };
 
@@ -82,7 +101,7 @@ const descendingOrder = (num) => {
     return {
       status: 400,
       data: {
-        error: `Invalid input`,
+        error: `Invalid input enter numbers`,
       },
     };
   } else {
@@ -98,7 +117,12 @@ const descendingOrder = (num) => {
       }
     }
 
-    return num;
+    return {
+      status: 200,
+      data: {
+        desending: num,
+      },
+    };
   }
 };
 
