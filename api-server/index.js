@@ -71,3 +71,14 @@ app.get("/number/sort/des", (req, res) => {
   console.log(sortedDescending);
   res.json(sortedDescending);
 });
+
+app.get('/number/count', (req, res) => {
+  const num = req.query.num ? req.query.num.split(",") : [];
+
+  const z = require('../util')
+
+  const count = z.occurrenes(num)
+
+  console.log(count)
+  // console.log(num)
+});
