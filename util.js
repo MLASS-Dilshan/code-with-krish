@@ -126,6 +126,12 @@ const descendingOrder = (num) => {
   }
 };
 
+const occurrenes = (num) => {
+  num.forEach((item) => {
+    console.log(item)
+  });
+}
+
 // minNumber(num1, num2)
 
 module.exports = {
@@ -134,4 +140,5 @@ module.exports = {
   average,
   ascendingOrder,
   descendingOrder,
+  occurrenes
 };
