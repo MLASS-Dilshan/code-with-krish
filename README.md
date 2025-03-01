@@ -1,6 +1,6 @@
 When you want to run the frontend use frontend-new project Do Not use the frontend project
 
-frontend-new project is created using vite
+frontend-new project is created using vite, and the command to run FE in npm run dev
 
 References
 
