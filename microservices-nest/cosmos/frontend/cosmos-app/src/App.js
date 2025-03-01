@@ -1,31 +1,25 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import OrderMgt from './components/OrderMgt'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import OrderMgt from "./components/OrderMgt";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <div>
-          <nav>
-            <Navigation nav = {'Order management'} url={"/order-management"}/>
-          </nav>
-        </div>
+        <Navbar />
 
         <Routes>
-          <Route path="/order-management" element = {<OrderMgt/>} />
+          <Route path="/" element = {<Home />}/>
+          <Route path="/order-management" element={<OrderMgt />} />
         </Routes>
       </BrowserRouter>
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-function Navigation({nav, url}) {
-  return (
-    <li>
-      <Link to={url}>{nav}</Link>
-    </li>
-  )
-}
-
-export default App
+export default App;
