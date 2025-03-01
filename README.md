@@ -1,3 +1,7 @@
+When you want to run the frontend use frontend-new project Do Not use the frontend project
+
+frontend-new project is created using vite
+
 References
 
 https://dev.to/imranshaik012/how-do-we-sort-an-array-in-javascript-without-sort-function-31p8
