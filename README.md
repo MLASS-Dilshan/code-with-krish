@@ -12,6 +12,8 @@ https://www.w3schools.com/jsref/jsref_some.asp#:~:text=The%20some()%20method%20c
 
 React
 
+https://vite.dev/guide/
+
 https://hygraph.com/blog/routing-in-react
 
 https://medium.com/@alexanie_/link-component-in-react-router-6872291bf78e 
