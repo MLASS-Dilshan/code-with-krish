@@ -9,7 +9,8 @@ https://www.w3schools.com/jsref/jsref_some.asp#:~:text=The%20some()%20method%20c
 React
 
 https://hygraph.com/blog/routing-in-react
-https://medium.com/@alexanie_/link-component-in-react-router-6872291bf78e or https://api.reactrouter.com/v7/functions/react_router.Link.html
+https://medium.com/@alexanie_/link-component-in-react-router-6872291bf78e 
+https://api.reactrouter.com/v7/functions/react_router.Link.html
 
 Css
 
