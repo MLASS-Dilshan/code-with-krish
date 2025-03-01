@@ -9,3 +9,7 @@ export const getOrders = () => {
 export const createOrder = (order) => {
     return axios.post(baseUrl, order)
 }
+
+export const getOrderById = (id) => {
+    return axios.get(`${baseUrl}/${id}`)
+}

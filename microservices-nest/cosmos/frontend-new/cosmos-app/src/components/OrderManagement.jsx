@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createOrder, getOrders } from "../service/OrderService";
+import ViewItems from "./ViewItems";
+import { Link } from "react-router-dom";
 
 const OrderManagement = () => {
   // usestate for getting all orders
@@ -36,6 +38,8 @@ const OrderManagement = () => {
       setProductId('')
       setPrice('')
       setQty('')
+
+      fetchOrders()
     } catch (err) {
       console.log("Error creating order", err);
     }
@@ -134,7 +138,7 @@ const OrderManagement = () => {
                 <td>{order.createdAt}</td>
                 <td>
                   <button className="edit-btn">Edit</button>
-                  <button className="view-btn">View items</button>
+                  <button className="view-btn"><Link to={`/view-item/${order.id}`} className="view-link">View items</Link></button>
                 </td>
               </tr>
             ))}
