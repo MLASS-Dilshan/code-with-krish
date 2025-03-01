@@ -34,13 +34,25 @@ const OrderMgt = () => {
     }
   };
 
-  // const handleChnage = () => {
-  //     const {name, value} = e.target;
+  const handleChnage = (e) => {
+    const { name, value } = e.target;
 
-  //     if(name === ) {
+    if (name === "customerId") {
+      setCustomerId(value);
+    }
 
-  //     }
-  // }
+    if (name === "prodId") {
+      setProductId(value);
+    }
+
+    if (name === "price") {
+      setPrice(value);
+    }
+
+    if (name === "qty") {
+      setQty(value);
+    }
+  };
 
   useEffect(() => {
     getOrders();
@@ -63,9 +75,9 @@ const OrderMgt = () => {
         <label>Customer ID</label>
         <input
           type="text"
-          id="cus_id"
+          name="customerId"
           value={customerId}
-          onChange={(e) => setCustomerId(e.target.value)}
+          onChange={handleChnage}
         />
 
         <br />
@@ -73,30 +85,20 @@ const OrderMgt = () => {
         <label>Product ID</label>
         <input
           type="text"
-          id="prod_id"
+          name="prodId"
           value={productId}
-          onChange={(e) => setProductId(e.target.value)}
+          onChange={handleChnage}
         />
 
         <br />
 
         <label>Price</label>
-        <input
-          type="text"
-          id="price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
+        <input type="text" name="price" value={price} onChange={handleChnage} />
 
         <br />
 
         <label>Qty</label>
-        <input
-          type="text"
-          id="qty"
-          value={qty}
-          onChange={(e) => setQty(e.target.value)}
-        />
+        <input type="text" name="qty" value={qty} onChange={handleChnage} />
 
         <br />
 

@@ -6,8 +6,8 @@ const createOrder = async(order) => {
     return axios.post(baseUrl, order);
 }
 
-// const getOrders = async() => {
-//     return axios.get(baseUrl)
-// }
+const getOrders = async() => {
+    return axios.get(baseUrl)
+}
 
-export default {createOrder};
+export default {createOrder, getOrders};
