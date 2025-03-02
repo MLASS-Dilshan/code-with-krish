@@ -14,6 +14,10 @@ https://www.geeksforgeeks.org/bubble-sort-algorithms-by-using-javascript/
 
 https://www.w3schools.com/jsref/jsref_some.asp#:~:text=The%20some()%20method%20checks,one%20of%20the%20array%20elements.
 
+https://docs.nestjs.com/techniques/http-module
+
+https://developer.mozilla.org/en-US/docs/Web/API/Response/status
+
 React
 
 https://vite.dev/guide/
