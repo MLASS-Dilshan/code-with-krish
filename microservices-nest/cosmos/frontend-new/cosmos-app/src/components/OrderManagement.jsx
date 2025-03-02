@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { createOrder, getOrders } from "../service/OrderService";
 import ViewItems from "./ViewItems";
 import { Link } from "react-router-dom";
+import { getProducts } from "../service/IncentoryService";
 
 const OrderManagement = () => {
   // usestate for getting all orders
   const [orders, setOrders] = useState([]);
+  const [products, setProducts] = useState([])
 
   //   usestate for creating an order
   const [customerId, setCustomerId] = useState("");
@@ -19,6 +21,17 @@ const OrderManagement = () => {
     console.log("order submitted");
 
     try {
+
+      const response$ = await getProducts(productId, qty); 
+      if (!response$.data.available) {
+        alert(`Product with ID ${productId} is out of stock.`);
+        return
+      }
+      // if (response$.status === 404) {
+      //   alert (`Product Id ${productId} not exists`)
+      //   return
+      // }
+
       const order = {
         customerId,
         items: [
@@ -30,8 +43,10 @@ const OrderManagement = () => {
         ],
       };
 
+
+
       console.log({ customerId, productId, price, qty });
-      const response = await createOrder(order);
+      let response = await createOrder(order);
       console.log(response.data);
 
       setCustomerId('')
@@ -39,11 +54,34 @@ const OrderManagement = () => {
       setPrice('')
       setQty('')
 
+      
       fetchOrders()
     } catch (err) {
       console.log("Error creating order", err);
+
+      if(err.status === 400) {
+        alert("This customer does not exist..")
+      } else if (err.status === 500) {
+        alert("Server Error")
+      } else if (err.status === 404) {
+        alert (`product Id ${productId} not found`)
+      } 
     }
   };
+
+// const fetchProducts = async() => {
+
+//   try {
+//     const response = await getProducts()
+
+//     if (!response.data.available) {
+//       console.log('not available')
+//     }
+//   } catch(err) {
+//     console.log(err)
+//   }
+  
+// }
 
   //   function to catch input change no need to use separate onChange function in inputs, just use this handle change function
   const handleChange = (e) => {

@@ -83,15 +83,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 30vh;
 }
 
 table {
   border: 2px solid rgb(140 140 140);
   width: 60%;
-  height: 300px;
+  /* height: 300px; */
   border-collapse: collapse;
   text-align: center;
+}
+
+table tr {
+  height: 50px;
 }
 
 th,
@@ -130,4 +134,29 @@ input {
 .view-link {
   text-decoration: none;
   color: black;
+}
+
+.customer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.btn-cus {
+  display: flex;
+  justify-content: center;
+}
+
+.inputCus:focus {
+  border: 1px solid #578fca;
+}
+
+.cus-submit-btn {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cus-submit-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
