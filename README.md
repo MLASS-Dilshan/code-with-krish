@@ -2,6 +2,12 @@ When you want to run the frontend use frontend-new project Do Not use the fronte
 
 frontend-new project is created using vite, and the command to run FE is npm run dev
 
+Frontend flow
+
+1) Create a customer 
+2) Add products
+3) Create orders
+
 References
 
 https://dev.to/imranshaik012/how-do-we-sort-an-array-in-javascript-without-sort-function-31p8
