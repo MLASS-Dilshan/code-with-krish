@@ -2,6 +2,12 @@ When you want to run the frontend use frontend-new project Do Not use the fronte
 
 frontend-new project is created using vite, and the command to run FE is npm run dev
 
+Frontend flow
+
+1) Create a customer 
+2) Add products
+3) Create orders
+
 References
 
 https://dev.to/imranshaik012/how-do-we-sort-an-array-in-javascript-without-sort-function-31p8
@@ -13,6 +19,10 @@ https://stackoverflow.com/questions/43856311/bubble-sort-algo-sorting-items-in-d
 https://www.geeksforgeeks.org/bubble-sort-algorithms-by-using-javascript/
 
 https://www.w3schools.com/jsref/jsref_some.asp#:~:text=The%20some()%20method%20checks,one%20of%20the%20array%20elements.
+
+https://docs.nestjs.com/techniques/http-module
+
+https://developer.mozilla.org/en-US/docs/Web/API/Response/status
 
 React
 
